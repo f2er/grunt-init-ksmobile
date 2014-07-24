@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>UED前端项目构建集成</title>
+    <link href="root/resource/assets/css/demo.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            color:#08C;
+        }
+        a:hover{
+            color:#f60;
+        }
+        html,body{
+            background: #F5F6F6;
+        }
+        .p_container{
+            width:700px;
+            margin:0 auto;
+            background: #fff;
+            border:1px solid #ccc;
+        }
+        .grunt-btn{
+            width:600px;
+            padding-top:20px;
+            margin:0 auto 20px;
+            /*margin:-106px 0 0 -300px;*/
+            display: block;
+            font-family: Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 40px;
+            color:#555;
+            text-decoration: none;
+            /*position: absolute;
+            left:50%;
+            top:50%;*/
+        }
+        .grunt-btn:hover{
+            color:#333;;
+        }
+        .grunt-btn img{
+            width:90px;
+            height:106px;
+            vertical-align: middle;;
+        }
+        .m_box{
+            padding:0 20px;
+            font-family: Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif;
+            font-size: 18px;
+            font-weight: 100;
+            line-height: 30px;
+            color: #2F2F2F;
+        }
+        .author{
+            text-align: right;
+            padding:0 20px;
+        }
+        .code{
+            font-size: 14px;
+            padding: 0 10px;
+            color: #F8F8F8;
+            background: #181818;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="p_container">
+        <h1 class="grunt-btn">
+            <img src="grunt-logo.png" alt=""/>
+            UED前端项目Mobile构建集成包
+        </h1>
+        <!--m_box-->
+        <div class="m_box">
+            <h2>必备软件：</h2>
+            <p>本套构建包基于node.js环境。</p>
+            <p><a href="http://nodejs.org/" target="_blank">nodeJS下载</a>、<a href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git" target="_blank">Git Bash下载</a></p>
+        </div>
+        <!--m_box-->
+        <!--m_box-->
+        <div class="m_box">
+            <h2>安装步骤：</h2>
+            <p>1：为了保证项目构建集成包统一管理，托管在github上，获取基础构建包时，请在git Bash中操作.</p>
+            <p>命令行:<span class="code">git clone https://github.com/f2er/grunt-init-ksmobile.git ~/.grunt-init/ksmobile</span></p>
+            <p>2：初始化项目模板，先确认本机中是否安装grunt-init，如没安装，执行 <span class="code">npm install -g grunt-init</span></p>
+            <p>3：切换到本地项目目录,如project，执行 <span class="code">grunt-init ksmobile</span>，其他按提示操作即可或直接Enter跳过.安装成功后，执行 <span class="code">npm install</span> 直接回车，进入安装grunt 插件。整个前端基础构建包完成。</p>
+        </div>
+        <!--m_box-->
+        <!--m_box-->
+        <div class="m_box">
+            <h2>集成包功能：</h2>
+            <p>包含CSS合并压缩、JS混淆压缩、模板页引入、图片优化压缩等。</p>
+        </div>
+        <!--m_box-->
+        <!--m_box-->
+        <div class="m_box">
+            <h2>集成包功能插件：</h2>
+            <p>
+                <a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a>
+            </p>
+            <p>
+                <a href="https://github.com/gruntjs/grunt-contrib-cssmin" target="_blank">grunt-contrib-cssmin</a>
+            </p>
+            <p>
+                <a href="https://github.com/gruntjs/grunt-contrib-imagemin" target="_blank">grunt-contrib-imagemin</a>
+            </p>
+            <p>
+                <a href="https://github.com/gruntjs/grunt-contrib-uglify" target="_blank">grunt-contrib-uglify</a>
+            </p>
+            <p>
+                <a href="https://github.com/vanetix/grunt-includes" target="_blank">grunt-includes</a>
+            </p>
+            <p>
+                <a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank">grunt-contrib-watch</a>
+            </p>
+        </div>
+        <!--m_box-->
+        <!--m_box-->
+        <div class="m_box">
+            <h2>静态资源管理：采用Bower包管理工具</h2>
+            <p>如本机中没有安装bower，可以在项目目录，在git Bash中操作 <span class="code">npm install  bower -g</span> </p>
+            <p>Bower 资源列表：<a href="http://sindresorhus.com/bower-components/">前端组件列表</a></p>
+            <p>通过bower除了可以下载官方上的插件外，还可以下载本地组件、团队线上组件。只要通过简单的命令就可以实现资源统一管理  <span class="code">bower install path/to/**.js</span></p>
+            <p>更新：每需要一个插件就bower install就很繁琐，现在只要对项目中的bower.json文件中dependencies对象做一定的修改即可，最后执行一次bower install即可安装项目所需要的插件。</p>
+        </div>
+        <!--m_box-->
+        <p class="author">@情封</p>
+    </div>
+
+</body>
+</html>
